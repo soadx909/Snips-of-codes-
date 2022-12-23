@@ -1,1 +1,17 @@
 
+# Load two datasets
+diamonds = sns.load_dataset("diamonds")
+tips = sns.load_dataset("tips")
+
+# Write to the same excel file
+with pd.ExcelWriter("data/data.xlsx") as writer:
+
+    diamonds.to_excel(writer, sheet_name="diamonds")
+    tips.to_excel(writer, sheet_name="tips")
+    
+    
+    
+    
+    https://towardsdatascience.com/25-advanced-pandas-functions-people-are-using-without-telling-you-b65fa442f0f4
+    
+    
