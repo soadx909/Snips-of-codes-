@@ -8,7 +8,13 @@ with pd.ExcelWriter("data/data.xlsx") as writer:
 
     diamonds.to_excel(writer, sheet_name="diamonds")
     tips.to_excel(writer, sheet_name="tips")
-    
+
+
+# Get diamonds that are priced between 3500 and 3700 dollars
+diamonds[diamonds["price"].between(3500, 3700, inclusive="neither")].sample(5)
+      
+      
+      
     
     
     
